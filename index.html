@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Layout with floats</title>
+
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-size: 30px;
+      color: black;
+    }
+
+    nav {
+      background-color: green;
+    }
+
+    .left {
+      float: left;
+      background-color: red;
+    }
+
+    .column {
+      width: 50%;
+      height: 900px;
+    }
+
+    .right {
+      float: right;
+      background-color: #0799d3;
+    }
+
+    footer {
+      background-color: #4a4a4f;
+      /* Footer would have collapsed
+      if we didn't clear its left side */
+      clear: left;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    Header (not floated)
+  </nav>
+
+  <section class="left column">
+    Floated to the left
+  </section>
+  <aside class="right column">
+    Floated to the right
+  </aside>
+
+  <footer>
+   footer (not floated)
+  </footer>
+</body>
+</html>
